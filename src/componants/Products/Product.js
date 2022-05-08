@@ -1,9 +1,16 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 const Product = ({ product }) => {
     console.log(product);
-    const { name, image, description, price, quantity, supplier } = product;
+    const {_id, name, image, description, price, quantity, supplier } = product;
+    const navigate = useNavigate();
+
+    const navigateProductDetails = id => {
+        navigate(`/inventory/${id}`)
+    }
+    
     return (
         <div className='col-lg-4 col-md-6 col-sm-12 text-center bg-light border p-4'>
             <img className='my-2' width={300} src={image} alt="" />
@@ -12,7 +19,7 @@ const Product = ({ product }) => {
             <h3>Price: ${price}</h3>
             <h4>Qualtity: {quantity}</h4>
             <p>Supplier: {supplier}</p>
-            <button className='btn btn-success'>Manage</button>
+            <button onClick={() => navigateProductDetails(_id)} className='btn btn-success'>Manage</button>
 
             {/* <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src={image} />
