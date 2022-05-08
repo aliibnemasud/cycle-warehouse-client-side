@@ -5,7 +5,7 @@ const Product = ({ product }) => {
     console.log(product);
     const { name, image, description, price, quantity, supplier } = product;
     return (
-        <div className='col-lg-4 col-md-6 col-sm-12'>
+        <div className='col-lg-4 col-md-6 col-sm-12 text-center bg-light border p-4'>
             <img className='my-2' width={300} src={image} alt="" />
             <h3>{name}</h3>
             <p>{description.slice(0,150)}...</p>            
