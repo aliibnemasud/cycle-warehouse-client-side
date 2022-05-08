@@ -7,7 +7,7 @@ import c3 from '../img/c3.jpg';
 const Banner = () => {
     return (
         <Carousel variant="dark">
-            <Carousel.Item>
+            <Carousel.Item className='text-light'>
                 <img
                     className="d-block w-100"
                     src={c1}

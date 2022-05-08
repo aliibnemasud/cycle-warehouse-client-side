@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Atlas Cycles",
+        "image": "https://i.ibb.co/0jD6CrC/Avon-Guts-Cycle-for-Boys-e1528368571360-300x186.webp",
+        "description": "This brand was established in 1950. If you are someone born in the 1960’s/70’s, this is a brand that you will remember very well. This company was established by Shri Janki Das Kapur to serve the needs of the common man of India. The need for a cost-effective mode of transportation.",
+        "price": 820,
+        "quantity": 5,
+        "supplier": "Alex"
+    },
+    {
+        "name": "Bianchi Cycles",
+        "image": "https://i.ibb.co/d2DJ81d/Best-Bicycle-brands-in-india-Atlas-Peak-Big-Boss-Fat-Bike-300x164.webp",
+        "description": "This is the first International bicycle brand that I am covering in this list so far. Bianchi is an Italian bicycle manufacturer and has a history of over 130 years in this field. They are also among the top international brands. They are known for their performance models.",
+        "price": 650,
+        "quantity": 8,
+        "supplier": "Curry Alan"
+    },
+    {
+        "name": "BSA Cycles",
+        "image": "https://i.ibb.co/nM8jF5R/Bianchi-c-sport-Bicycle-300x173.webp",
+        "description": "BSA is a well know and recognized brand in India. This brand was set up by Murugappa Group in collaboration with Tube Investments from the UK. They also own a lot of other well-known cycles brands in India. Namely Hercules, Ladybird, Montra etc. We will be covering them later in the article below.",
+        "price": 920,
+        "quantity": 11,
+        "supplier": "Tim Joe"
+    },
+    {
+        "name": "Avon Cycles",
+        "image": "https://i.ibb.co/p4NYV7y/BSA-Cycles-Photon-300x185.webp",
+        "description": "Like Atlas, Avon is also amongst the oldest cycle brands in India. They started off as a cycle saddle and brake manufacturing company in 1948. Avon cycles started manufacturing bicycles in 1951. This company was set up by Pahwa brothers in Punjab. They believe in offering a good quality product at a very affordable price.",
+        "price": 680,
+        "quantity": 12,
+        "supplier": "Kelbin Burks"
+    },
+    {
+        "name": "Btwin Cycles",
+        "image": "https://i.ibb.co/7y542gm/bwstin.webp",
+        "description": "Btwin is a cycling brand owned by a French company Decathlon. I am sure all the sports enthusiastic crowd would surely know what Decathlon is. If not have a look at their India website (Link provided below the image). Decathlon cycles division was formed in 1976. It was later officially renamed as Btwin in the year 2006.",
+        "price": 820,
+        "quantity": 21,
+        "supplier": "Maxwell Glan"
+    },
+    {
+        "name": "Cannondale Cycles",
+        "image": "https://i.ibb.co/5v2KDQK/Cannondale.webp",
+        "description": "Cannondale brand is owned by Canadian firm Dorel Industries. They are known globally for their innovative bicycle designs. They produce and sell a wide range of performance bicycles across the globe. Initially, all their bicycles were handcrafted in the USA. However, now bicycles are manufactured at facilities in China and Taiwan.",
+        "price": 820,
+        "quantity": 21,
+        "supplier": "Cannondale"
+    },
+    {
+        "name": "Dahon Bicycles",
+        "image": "https://i.ibb.co/rf35x1c/Dahon-Cycle-Brand-India.webp",
+        "description": "Dahon cycles are the leaders in manufacturing of folding bicycles world over. The company was founded by Hon brothers in the year 1982. They were the first in the world to launch a folding bicycle that you could carry to work on a train or a city metro.",
+        "price": 820,
+        "quantity": 21,
+        "supplier": "Cannondale"
+    }
+]
