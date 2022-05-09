@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import AddNewItem from './componants/AddNewItem/AddNewItem';
 import Blogs from './componants/Blog/Blogs';
 import Error from './componants/Error/Error';
 import Footer from './componants/Footer/Footer';
@@ -22,6 +23,9 @@ function App() {
         <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/signin' element={<SignIn></SignIn>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        <Route path='/manageinventory/addnewitem' element={<RequireAuth>
+          <AddNewItem></AddNewItem>
+          </RequireAuth>}></Route>
         <Route path='/manageinventory' element={
         <RequireAuth>
           <ManageInventory></ManageInventory>

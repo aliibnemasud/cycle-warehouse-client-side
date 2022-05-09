@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Product from './Product';
+import SingleProductInventory from './SingleProductInventory';
 
-const Products = () => {
+const InventoryProduct = () => {
     const [products, setProducts] = useState([]);
     useEffect(() => {
         fetch('https://safe-plateau-15202.herokuapp.com/products')
@@ -15,7 +15,7 @@ const Products = () => {
             <div className="container">
                 <div className="row">                    
                         {
-                            products.map(product => <Product key={product._id} product={product}></Product>)
+                            products.map(product => <SingleProductInventory key={product._id} product={product} ></SingleProductInventory>)
                         }                    
                 </div>
                 <div className="text-center">
@@ -26,4 +26,4 @@ const Products = () => {
     );
 };
 
-export default Products;
+export default InventoryProduct;
