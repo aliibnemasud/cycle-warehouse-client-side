@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import ManageInventory from '../ManageInventory/ManageInventory';
 import Product from './Product';
 
 const Products = () => {
@@ -20,6 +21,7 @@ const Products = () => {
                             products.map(product => <Product key={product._id} product={product}></Product>)
                         }                    
                 </div>
+                <ManageInventory></ManageInventory>
             </div>
         </div>
     );
