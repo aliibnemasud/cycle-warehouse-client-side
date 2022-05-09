@@ -4,7 +4,7 @@ import { Container, Navbar } from 'react-bootstrap';
 const Footer = () => {
     return (
         <div>
-            <Navbar fixd="bottom">
+            <Navbar fixd="bottom" className='fixed-bottom bg-light'>
                 <Container>
                     <Navbar.Brand href="#home">Footer</Navbar.Brand>
                     <Navbar.Toggle />

@@ -6,7 +6,7 @@ const Products = () => {
 
     useEffect(() => {
 
-        fetch('http://localhost:5000/products')
+        fetch('https://safe-plateau-15202.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setProducts(data));
 
@@ -14,11 +14,10 @@ const Products = () => {
     return (
         <div>            
             <h1 className='my-5 text-center'>Products ({products.length})</h1>
-
             <div className="container">
                 <div className="row">                    
                         {
-                            products.map(product => <Product product={product}></Product>)
+                            products.map(product => <Product key={product._id} product={product}></Product>)
                         }                    
                 </div>
             </div>
