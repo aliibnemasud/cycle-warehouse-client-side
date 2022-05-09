@@ -1,6 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const AddNewItem = () => {
+    const navigate = useNavigate();
     const handleAddItem = e => {
         e.preventDefault();
         const name = e.target.name.value;
@@ -13,7 +15,7 @@ const AddNewItem = () => {
         const product = {name, description, price, quantity, supplier, image};       
 
         // post method to put the programme on the database
-        fetch('http://localhost:5000/product', {
+        fetch('https://safe-plateau-15202.herokuapp.com', {
             method: 'POST',
             headers: {
                 'content-type':'application/json'
@@ -23,6 +25,7 @@ const AddNewItem = () => {
         .then(res => res.json())
         .then(data => {
             console.log('Success', data);
+            navigate('/manageinventory');            
         } )
     }
     

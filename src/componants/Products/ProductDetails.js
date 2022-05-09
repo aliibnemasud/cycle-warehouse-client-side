@@ -15,6 +15,12 @@ const ProductDetails = () => {
             .then(data => setProduct(data))
     }, [])
 
+    // update product    
+
+    const updateQuantity = () => {
+
+    }
+
     return (
         <div className='my-5 container' >
             <h1 className='mb-5'>"</h1>
@@ -28,7 +34,7 @@ const ProductDetails = () => {
                 </div>
                 <p>Supplier: {supplier}</p>
                 <div className="d-flex justify-content-between">
-                    <Button>Add Quantity</Button>
+                    <Button onClick={updateQuantity}>Add Quantity</Button>
                     <Button variant="success">Delivered</Button>
                 </div>
             </div>

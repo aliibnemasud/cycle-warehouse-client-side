@@ -27,7 +27,17 @@ const Header = () => {
                         <Nav.Link href="/inventory">Inventory</Nav.Link>
                         <Nav.Link href="/manageinventory">Manage Inventory</Nav.Link>
 
-                        {user?.uid ? <button className='btn btn-warning signBtn' onClick={logout}>Sign Out</button> :<Link to="/signin" className='btn btn-success signBtn'>Sign In</Link>}
+                        {
+                            user?.uid ? <Nav.Link href="/manageitem">Manage Items</Nav.Link> : ''
+                        }
+                        {
+                            user?.uid ? <Nav.Link href="/myitems">My items</Nav.Link> : ''
+                        }
+                        {
+                            user?.uid ? <Nav.Link href="/manageinventory/addnewitem">Add Itmes</Nav.Link> : ''
+                        }
+                        
+                        {user?.uid ? <button className='btn btn-warning signBtn' onClick={logout}>Sign Out</button> : <Link to="/signin" className='btn btn-success signBtn'>Sign In</Link>}
                         
                         {/* <Nav.Link eventKey={2} href="#memes">Somthing</Nav.Link>
                         <NavDropdown title="Ali Ibne Masud" id="collasible-nav-dropdown">

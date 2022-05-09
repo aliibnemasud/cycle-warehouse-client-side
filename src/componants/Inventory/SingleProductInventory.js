@@ -12,13 +12,16 @@ const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure to delete this product? This product will deleted parmanently.");
     if(proceed){        
         console.log("Deleting User", id);
-        const url = `http://localhost:5000/product/${id}`;
+        const url = `https://safe-plateau-15202.herokuapp.com/${id}`;
         fetch(url, {
             method: 'DELETE'
         })
         .then(res => res.json())
         .then(data => {
             console.log(data);
+            // const remaining = product.filter(product => product._id !== id);
+           window.location.reload();
+            
         })
     }
 }
