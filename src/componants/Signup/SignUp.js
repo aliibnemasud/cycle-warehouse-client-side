@@ -1,24 +1,32 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import auth from '../../firebase.init';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import SocialLogin from '../signIn/SocialLogin/SocialLogin';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const SignUp = () => {
     const emailRef = useRef('');
     const passwordRef = useRef('');
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || "/";
 
-    const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth);   
+    const [createUserWithEmailAndPassword] = useCreateUserWithEmailAndPassword(auth);   
 
-    const [email, setEmail] = useState('');
-    const [password, setPasswword] = useState('');
+    
     
 
     const handleSubmit = event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        createUserWithEmailAndPassword(email, password);        
+        createUserWithEmailAndPassword(email, password)
+
+        .then(()=>{            
+            navigate(from)            
+        })
+                
     }
 
     return (
