@@ -14,16 +14,14 @@ const ProductDetails = () => {
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [])
-
-    // update product    
+    
+    // update product
 
     const updateQuantity = () => {
 
     }
-
     return (
-        <div className='my-5 container' >
-            <h1 className='mb-5'>"</h1>
+        <div className='my-5 container' >            
             <div className='w-50 border p-4 mx-auto rounded'>
                 <img src={image} alt="" />
                 <h2 className='my-3'>Name: {name}</h2>

@@ -15,7 +15,7 @@ const AddNewItem = () => {
         const product = {name, description, price, quantity, supplier, image};       
 
         // post method to put the programme on the database
-        fetch('https://safe-plateau-15202.herokuapp.com', {
+        fetch('https://safe-plateau-15202.herokuapp.com/product', {
             method: 'POST',
             headers: {
                 'content-type':'application/json'

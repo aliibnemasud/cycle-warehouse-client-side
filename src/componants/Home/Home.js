@@ -14,11 +14,12 @@ const Home = () => {
     }, [])
 
     const sixProducts = products.slice(0,6);
+
     return (
         <div>            
             <Banner></Banner>            
             <div>            
-            <h1 className='my-5 text-center'>Products</h1>
+            <h1 className='my-5 text-center text-uppercase fw-bold text-success'>Products</h1>
             <div className="container">
                 <div className="row">                    
                         {
@@ -26,7 +27,7 @@ const Home = () => {
                         }                    
                 </div>
                 <div className="text-center">
-                <Link to='/manageinventory' className='btn btn-warning text-center mt-5'>Manage Inventory</Link>
+                <Link to='/dashboard/manageinventory' className='btn btn-warning text-center mt-5'>Manage Inventory</Link>
                 </div>
             </div>
         </div>

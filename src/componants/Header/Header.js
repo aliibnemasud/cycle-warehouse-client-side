@@ -4,6 +4,8 @@ import { Container, Nav, Navbar } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import './Header.css';
+import logo from '../img/logo.png';
 
 const Header = () => {
     const navigate = useNavigate();
@@ -16,37 +18,18 @@ const Header = () => {
 
     }
     return (
-        <Navbar collapseOnSelect className='fixed-top' expand="lg" bg="dark" variant="dark">
+        <Navbar collapseOnSelect className='py-2' expand="lg" bg="dark" variant="dark">
             <Container>
-                <Navbar.Brand href="/">Cycle Warehourse</Navbar.Brand>
+                <Navbar.Brand href="/"><img src={logo} alt="" /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">                    
-                    <Nav className='ms-auto'>
+                    <Nav className='ms-auto navbar-links'>
                         <Nav.Link href="/home">Home</Nav.Link>
                         <Nav.Link href="/blogs">Blogs</Nav.Link>
-                        <Nav.Link href="/inventory">Inventory</Nav.Link>
-                        <Nav.Link href="/manageinventory">Manage Inventory</Nav.Link>
-
-                        {
-                            user?.uid ? <Nav.Link href="/manageitem">Manage Items</Nav.Link> : ''
-                        }
-                        {
-                            user?.uid ? <Nav.Link href="/myitems">My items</Nav.Link> : ''
-                        }
-                        {
-                            user?.uid ? <Nav.Link href="/manageinventory/addnewitem">Add Itmes</Nav.Link> : ''
-                        }
+                        <Nav.Link href="/Dashboard">Dashboard</Nav.Link>
+                                                
+                        {user?.uid ? <button className='btn btn-warning signBtn ml-3' onClick={logout}>Sign Out</button> : <Link to="/signin" className='btn btn-success signBtn ml-3'>Sign In</Link>}                        
                         
-                        {user?.uid ? <button className='btn btn-warning signBtn' onClick={logout}>Sign Out</button> : <Link to="/signin" className='btn btn-success signBtn'>Sign In</Link>}
-                        
-                        {/* <Nav.Link eventKey={2} href="#memes">Somthing</Nav.Link>
-                        <NavDropdown title="Ali Ibne Masud" id="collasible-nav-dropdown">
-                            <NavDropdown.Item href="#action/3.1">Profile</NavDropdown.Item>
-                            <NavDropdown.Item href="#action/3.2">Setting</NavDropdown.Item>
-                            
-                            <NavDropdown.Divider />
-                            <NavDropdown.Item href="#action/3.4">Sign Out</NavDropdown.Item>
-                        </NavDropdown> */}
                     </Nav>
                 </Navbar.Collapse>
             </Container>

@@ -1,17 +1,19 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import AddNewItem from './componants/AddNewItem/AddNewItem';
 import Blogs from './componants/Blog/Blogs';
+import Dashboard from './componants/Dashboard/Dashboard';
 import Error from './componants/Error/Error';
 import Footer from './componants/Footer/Footer';
 import Header from './componants/Header/Header';
 import Home from './componants/Home/Home';
-import Inventory from './componants/Inventory/Inventory';
-import ManageInventory from './componants/ManageInventory/ManageInventory';
 import ProductDetails from './componants/Products/ProductDetails';
 import RequireAuth from './componants/RequireAuth/RequireAuth';
 import SignIn from './componants/signIn/SignIn';
 import SignUp from './componants/Signup/SignUp';
+import AddNewItem from './componants/Dashboard/AddNewItem/AddNewItem';
+import ManageInventory from './componants/Dashboard/ManageInventory/ManageInventory';
+import Inventory from './componants/Dashboard/Inventory/Inventory';
+
 
 function App() {
   return (
@@ -30,11 +32,24 @@ function App() {
         <RequireAuth>
           <ManageInventory></ManageInventory>
         </RequireAuth>}></Route>
-        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>  
         <Route path='/inventory/:productId' element={<RequireAuth><ProductDetails></ProductDetails></RequireAuth>}></Route>
         <Route path='*' element={<Error></Error>}></Route>
-        <Route path='/inventory' element={<RequireAuth><Inventory></Inventory></RequireAuth>}></Route>
+        
+
+          <Route path='/dashboard' element={<Dashboard></Dashboard>}>
+            
+            <Route index path='additem' element={<AddNewItem></AddNewItem>}></Route>
+            <Route  path='manageinventory' element={<ManageInventory></ManageInventory>}></Route>
+            <Route path='manageinventory/inventory/:productId' element={<ProductDetails></ProductDetails>}></Route>           
+
+          </Route>
+
       </Routes>
+
+      
+
+      
 
       <Footer></Footer>
     </div>

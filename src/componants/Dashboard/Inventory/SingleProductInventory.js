@@ -8,11 +8,12 @@ const SingleProductInventory = ({ product }) => {
     const navigateProductDetails = id => {
         navigate(`/inventory/${id}`)
     }
-const handleDelete = (id) => {
+    
+    const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure to delete this product? This product will deleted parmanently.");
     if(proceed){        
         console.log("Deleting User", id);
-        const url = `https://safe-plateau-15202.herokuapp.com/${id}`;
+        const url = `https://safe-plateau-15202.herokuapp.com/product/${id}`;
         fetch(url, {
             method: 'DELETE'
         })
@@ -24,8 +25,7 @@ const handleDelete = (id) => {
             
         })
     }
-}
-    
+}    
     return (
         <div className='col-lg-4 col-md-6 col-sm-12 text-center bg-light border p-4'>
             <img className='my-2' width={300} src={image} alt="" />

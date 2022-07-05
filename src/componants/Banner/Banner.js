@@ -3,10 +3,34 @@ import { Carousel } from 'react-bootstrap';
 import c1 from '../img/c1.jpg';
 import c2 from '../img/c2.jpg';
 import c3 from '../img/c3.jpg';
+import cycle from '../img/bluecycle.png';
+import './Banner.css';
+
+
 
 const Banner = () => {
     return (
-        <Carousel variant="dark">
+        <div>
+
+            <section className='d-flex flex-wrap justify-content-between align-items-center container mx-auto my-5'>
+                <div className="col-lg-6 col-md-6 col-sm-12">
+                    <h3 className='text-uppercase text-success'>The Race Series</h3>
+                    <h1 className='text-uppercase fw-bold my-4'>Featured Products</h1>
+                    <p>Anybody who takes this survey will help protect the future of the Tour Series, as well as other major cycling events in the UK, by showcasing the positive impact that cycling has on host towns and cities.</p>
+                    <div>
+                        <button className='btn btn-light'>About Us</button>
+                        <button className='btn btn-success m-4'>Shop Now</button>
+                    </div>
+
+                </div>
+                <div className="col-lg-5 col-md-6 col-sm-12 text-center">
+                    <img src={cycle} className="img-fluid" alt="" />
+                </div>
+            </section>
+
+
+
+        {/* <Carousel variant="dark">
             <Carousel.Item className='text-light'>
                 <img
                     className="d-block w-100"
@@ -40,7 +64,8 @@ const Banner = () => {
                     <p className='text-light'>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
                 </Carousel.Caption>
             </Carousel.Item>
-        </Carousel>
+        </Carousel> */}
+        </div>
     );
 };
 

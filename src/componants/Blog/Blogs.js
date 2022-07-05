@@ -12,8 +12,8 @@ const Blogs = () => {
 
     }, [])
     return (
-        <div className="container">
-            <h1 className='my-5 text-center'>Our Blogs</h1>
+        <div className="container mt-5">
+            <h1 className='my-5 text-center text-uppercase fw-bold text-success'>Our Blogs</h1>
             <div className="row container mx-auto">
             {
                 blogs.map(blog =><Blog key={blog._id} blog={blog}></Blog>)
